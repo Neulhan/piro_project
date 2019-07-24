@@ -8,14 +8,14 @@ def home(request):
     return render(request, "layout.html")
 
 def checking1(request):
-    return render(request, "")
+    return render(request, "quiz/make1.html")
 
 def checking2(request):
-    return render(request, "quiz/make1.html")
+    return render(request, "quiz/make2.html")
 
 
 def checking3(request):
-    return render(request, "makebase.html")
+    return render(request, "quiz/make3.html")
 
 def next(request):
     name = request.GET.get('name')

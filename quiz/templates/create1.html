@@ -1,0 +1,34 @@
+{% extends "makebase.html" %}
+
+{% block title %} <title>quiz1</title> {% endblock %}
+{% block progress %}
+{#    <div class="progress"></div>#}
+    <div class="progress last-progress"></div>
+{% endblock %}
+{% block question %}당신의 성격은?{% endblock %}
+
+{% block content %}
+
+        <form method="get" action="http://127.0.0.1:8000/quiz/create2">
+            <input type="hidden" value="0" name="p">
+            <button type="submit" class="cho first">
+               <div class="image">
+                   <img class="image" src="https://askcompanyjpe.blob.core.windows.net/media/askdjango/course/2017/03/06/49/4984ad9285ad40828156f6c3f4981e2c.jpg" alt="깜찍함" />
+               </div>
+                <p class="mul">깜찍함</p>
+            </button>
+        </form>
+
+        <form method="get" action="http://127.0.0.1:8000/quiz/create2">
+            <input type="hidden" value="1"  name="p">
+            <button type="submit" class="cho second">
+                <div class="image">
+                    <img class="image" src="https://t1.daumcdn.net/cfile/tistory/997350435B4952920E" alt="멋짐" />
+                </div>
+                <p class="mul">멋짐</p>
+            </button>
+        </form>
+
+
+
+{% endblock %}

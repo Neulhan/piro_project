@@ -1,0 +1,36 @@
+{% extends "makebase.html" %}
+
+{% block title %} <title>quiz2</title> {% endblock %}
+{% block progress %}
+    <div class="progress"></div>
+    <div class="progress last-progress"></div>
+{% endblock %}
+{% block question %}당신이 선호하는 간식은?{% endblock %}
+
+{% block content %}
+
+        <form method="get" action="http://127.0.0.1:8000/quiz/create3">
+            <input type="hidden" value="0"name="p">
+            <button type="submit"  class="cho first">
+               <div class="image">
+                   <img class="image" src="http://www.econovill.com/news/photo/201802/331912_191867_5054.jpg"
+                        alt="초콜릿" />
+               </div>
+                <p class="mul">초콜릿</p>
+            </button>
+        </form>
+
+        <form method="get" action="http://127.0.0.1:8000/quiz/create3">
+            <input type="hidden" value="1"name="p" >
+            <button type="submit" class="cho second">
+                <div class="image">
+                    <img class="image" src="https://i.ytimg.com/vi/9PbUeTeSetY/hqdefault.jpg"
+                         alt="초콜릿" />
+                </div>
+                <p class="mul">햄버거</p>
+            </button>
+        </form>
+
+
+
+{% endblock %}

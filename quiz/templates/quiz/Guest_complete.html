@@ -1,0 +1,38 @@
+{% extends "makebase.html" %}
+
+{% block content %}
+
+            <div class="card">
+                <h3>나의 점수</h3>
+                <div class="circle_container">
+                    여기에 원이 들어가는 container
+                    <div class="circle">
+                        여기에 원이 들어간다
+                    </div>
+                </div>
+            </div>
+
+            <div class="make">
+                <a href="../layout.html">나의 우정 테스트 만들기</a>
+            </div>
+
+
+            <div class="list_container">
+                <div class="list_header">
+                    <p>
+                        누가 {{ user.name }}님을 가장 잘 알까요?
+                    </p>
+                    <div class="scores_list">
+                        <table>
+                    <tr>
+                        <td><div class="text">{{ score.name }}님의 점수는 {{ score.score }}/10 입니다</div></td>
+                        <td>
+                            <span>*</span>/10
+                        </td>
+                    </tr>
+                </table>
+
+                    </div>
+                </div>
+            </div>
+{% endblock %}

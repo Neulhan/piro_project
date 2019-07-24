@@ -7,6 +7,15 @@ from django.urls import reverse
 def home(request):
     return render(request, "layout.html")
 
+def checking1(request):
+    return render(request, "blog/layout.html")
+
+def checking2(request):
+    return render(request, "make1.html")
+
+
+def checking3(request):
+    return render(request, "makebase.html")
 
 def next(request):
     name = request.GET.get('name')

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %} <title>Title</title> {% endblock %}
+
+    <style>
+
+        * {
+            margin: 0 auto;
+        }
+
+        body {
+            background-color: #f1f3f8;
+        }
+
+        .main {
+            margin-top: 50px;
+            background-color: #dde3e9;
+            width: 454px;
+            height: 1000px;
+            box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.20);
+            text-align: center;
+        }
+
+        .probar {
+            overflow: hidden;
+        }
+
+        .progress {
+            margin: 0;
+            width: 45.4px;
+            height: 50px;
+            background-color: #b19aff;
+            float: left;
+        }
+
+        .last-progress {
+            width: 45.4px;
+            transition-duration: 0.8s;
+            transition-timing-function: ease-in-out;
+        }
+
+        .choice {
+            overflow: hidden;
+        }
+
+        .image {
+            width: 100%;
+            height: 280px;
+            background-color: aquamarine;
+            z-index: 100;
+        }
+
+        .cho {
+            background-color: white;
+            width: 200px;
+            height: 320px;
+            float: left;
+            border: 0;
+        }
+
+        .cho:active {
+            border: 2px solid black;
+        }
+
+        button {
+            outline-color: black;
+        }
+
+        .first {
+            margin: 0 0 0 20px;
+        }
+
+        .second {
+            margin-right: 20px;
+            float: right;
+        }
+
+        .question {
+            text-align: left;
+            margin: 0;
+            padding: 45px 0 20px 20px;
+        }
+
+        .mul{
+            line-height: 40px;
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="contents main">
+    <div class="probar"> {% block progress %} {% endblock %}</div>
+    <h2 class="question">{% block question %} {% endblock %}</h2>
+    <div class="">
+        {% block content %}
+
+        {% endblock %}
+    </div>
+</div>
+
+</body>
+</html>

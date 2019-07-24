@@ -3,15 +3,26 @@
 {% block content %}
 
              <img src="https://static.zzz.studio/static/logoQuiz%403x.png" alt id="logo">
+<<<<<<< HEAD
             <form action="#" method="GET">
             <div class="guest_header">
                 <h4>
                     ***님
+=======
+            <form action="http://127.0.0.1:8000/quiz/{{ id }}/q1" method="GET">
+            <div class="guest_header">
+                <h4>
+                    {{ user.name }}님
+>>>>>>> 34723a051004ef6031998a4e59991cd74b0a48c4
                     <br>
                     우정퀴즈!
                 </h4>
                 <div class="how">
+<<<<<<< HEAD
                     <span>*</span>명이 참여했습니다.
+=======
+                    <span>{{ guest }}</span>명이 참여했습니다.
+>>>>>>> 34723a051004ef6031998a4e59991cd74b0a48c4
                 </div>
             </div>
 
@@ -22,14 +33,22 @@
                     <tr>
                         <td><div class="text">이름</div></td>
                         <td>
+<<<<<<< HEAD
                             <input type="text" id="name" placeholder="이름을 입력하세요">
+=======
+                            <input type="text" name="name" id="name" placeholder="이름을 입력하세요">
+>>>>>>> 34723a051004ef6031998a4e59991cd74b0a48c4
                         </td>
                     </tr>
                 </table>
             </div>
             <button>시작하기</button>
 
+<<<<<<< HEAD
             <a class="result" href="User_complete.html">결과 먼저보기 &nbsp;☞</a>
+=======
+            <a class="result" href="http://127.0.0.1:8000/quiz/{{ id }}/guest_complete">결과 먼저보기 &nbsp;☞</a>
+>>>>>>> 34723a051004ef6031998a4e59991cd74b0a48c4
             </form>
 
 {% endblock %}

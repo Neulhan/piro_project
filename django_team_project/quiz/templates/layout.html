@@ -1,0 +1,48 @@
+{% extends "makebase.html" %}
+
+{% block content %}
+
+    <form action="http://127.0.0.1:8000/quiz/create/" method="get">
+        <div class="card">
+            <h3>우정 테스트 만들기</h3>
+            <table>
+
+                <tr>
+                    <td>
+                        <div class="text">이름</div>
+                    </td>
+                    <td>
+                        <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <div class="text">제페토코드</div>
+                    </td>
+                    <td>
+                        <input type="text" id="code" name="code" placeholder="ZZZZZZZ">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <button>시작하기</button>
+    </form>
+
+    <div class="download">
+        <div class="down-head">
+            <div class="down-text">
+                제페토를 <br>
+                다운로드하세요
+            </div>
+            <!--                <div class="downImg">-->
+            <img src="https://static.zzz.studio/static/appiconsml%403x.png">
+            <!--                </div>-->
+        </div>
+        <div class="down-container">
+            <a href="">
+                <div>Download ZEPETO</div>
+            </a>
+        </div>
+
+{% endblock %}

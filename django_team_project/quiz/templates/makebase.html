@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="quiz/css/User_complete-css.css">
 
     <style>
+
         * {
             margin: 0 auto;
         }
@@ -203,50 +204,79 @@
             min-width: 120px;
             text-align: left;
         }
+
+        * {
+            margin: 0 auto;
+        }
+        body {
+            background-color: #f1f3f8;
+        }
+        .main {
+            margin-top: 50px;
+            background-color: #dde3e9;
+            width: 454px;
+            height: 1000px;
+            box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.20);
+            text-align: center;
+        }
+        .probar {
+            overflow: hidden;
+        }
+        .progress {
+            margin: 0;
+            width: 45.4px;
+            height: 50px;
+            background-color: #b19aff;
+            float: left;
+        }
+        .last-progress {
+            width: 45.4px;
+            transition-duration: 0.8s;
+            transition-timing-function: ease-in-out;
+        }
+        .choice {
+            overflow: hidden;
+        }
+        .image {
+            width: 100%;
+            height: 280px;
+            background-color: aquamarine;
+            z-index: 100;
+        }
+        .cho {
+            background-color: white;
+            width: 200px;
+            height: 320px;
+            float: left;
+            border: 0;
+        }
+        .cho:active {
+            border: 2px solid black;
+        }
+        button {
+            outline-color: black;
+        }
+        .first {
+            margin: 0 0 0 20px;
+        }
+        .second {
+            margin-right: 20px;
+            float: right;
+        }
+        .question {
+            text-align: left;
+            margin: 0;
+            padding: 45px 0 20px 20px;
+        }
+        .mul{
+            line-height: 40px;
+        }
     </style>
 </head>
 <body>
     <div class="full-contain">
         <div class="container">
             {% block content %}
-
-        <form action="http://127.0.0.1:8000/quiz/create/" method="get">
-        <div class="card">
-            <h3>우정 테스트 만들기</h3>
-            <table>
-
-                <tr>
-                    <td><div class="text">이름</div></td>
-                    <td>
-                            <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
-                    </td>
-                </tr>
-
-                <tr><td><div class="text">제페토코드</div></td>
-                    <td>
-                        <input type="text" id="code" name="code" placeholder="ZZZZZZZ">
-                    </td>
-                </tr>
-            </table>
-        </div>
-        <button>시작하기</button>
-        </form>
-
-        <div class="download">
-            <div class="down-head">
-                <div class="down-text">
-                    제페토를 <br>
-                    다운로드하세요
-                </div>
-<!--                <div class="downImg">-->
-                    <img src="https://static.zzz.studio/static/appiconsml%403x.png">
-<!--                </div>-->
-            </div>
-            <div class="down-container">
-                <a href="">
-                    <div>Download ZEPETO</div>
-                </a>
-            </div>
 
             {% endblock %}
         </div>

@@ -68,6 +68,7 @@
             background: springgreen;
             font-size: 20px;
             font-weight: 700;
+            text-align: center;
         }
         .download{
             width: 100%;
@@ -77,6 +78,7 @@
             padding-bottom: 50px;
             margin-top: 10px;
             margin-bottom: 35px;
+            background-color: white;
         }
         .down-head{
             text-align: left;
@@ -111,11 +113,9 @@
 
 </head>
 <body>
-<div class="full-container">
-
-    <div class="container">
-
-        <img src="https://static.zzz.studio/static/logoQuiz%403x.png" alt id="logo">
+    <div class="full-contain">
+        <div class="container">
+            {% block content %}
 
         <form action="http://127.0.0.1:8000/quiz/create/" method="get">
         <div class="card">
@@ -154,9 +154,9 @@
                     <div>Download ZEPETO</div>
                 </a>
             </div>
+
+            {% endblock %}
         </div>
     </div>
-
-</div>
 </body>
 </html>

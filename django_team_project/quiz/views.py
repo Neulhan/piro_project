@@ -8,10 +8,10 @@ def home(request):
     return render(request, "layout.html")
 
 def checking1(request):
-    return render(request, "blog/layout.html")
+    return render(request, "")
 
 def checking2(request):
-    return render(request, "make1.html")
+    return render(request, "quiz/make1.html")
 
 
 def checking3(request):

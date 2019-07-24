@@ -158,8 +158,8 @@ def create11(request):
 def guest_first(request, id):
     queryset = User.objects.all()
     queryset = queryset.filter(code=id)
-    print(queryset)
-    return render(request, "guest_home.html", {'user': queryset[0]})
+    a = Guest.objects.all()
+    return render(request, "quiz/Guest_layout.html", {'user': queryset[0], 'guest': len(a), 'id': id})
 
 
 def guest_q1(request, id):
@@ -168,5 +168,11 @@ def guest_q1(request, id):
     Guest.objects.create(name=guest.name)
     queryset = User.objects.all()
     queryset = queryset.filter(code=id)
-    return render(request, "guest_q1.html", {'user': queryset[0]})
+    return render(request, "guest_q1.html", {'user': queryset[0], 'id': id})
 
+
+def guest_complete(request, id):
+    queryset = User.objects.all()
+    queryset = queryset.filter(code=id)
+
+    return render(request, "quiz/Guest_complete.html", {'user': queryset[0]})

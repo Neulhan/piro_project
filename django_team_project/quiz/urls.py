@@ -17,6 +17,7 @@ urlpatterns = [
     path('create11/', views.create11),
     re_path(r'^(?P<id>\d+)/$', views.guest_first),
     re_path(r'^(?P<id>\d+)/q1/$', views.guest_q1),
+    re_path(r'^(?P<id>\d+)/guest_complete/$', views.guest_complete),
 
 
 ]

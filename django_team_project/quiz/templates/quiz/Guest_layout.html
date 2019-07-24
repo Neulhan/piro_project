@@ -1,0 +1,35 @@
+{% extends "makebase.html" %}
+
+{% block content %}
+
+             <img src="https://static.zzz.studio/static/logoQuiz%403x.png" alt id="logo">
+            <form action="http://127.0.0.1:8000/quiz/{{ id }}/q1" method="GET">
+            <div class="guest_header">
+                <h4>
+                    {{ user.name }}님
+                    <br>
+                    우정퀴즈!
+                </h4>
+                <div class="how">
+                    <span>{{ guest }}</span>명이 참여했습니다.
+                </div>
+            </div>
+
+
+            <div class="card">
+
+                <table>
+                    <tr>
+                        <td><div class="text">이름</div></td>
+                        <td>
+                            <input type="text" name="name" id="name" placeholder="이름을 입력하세요">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <button>시작하기</button>
+
+            <a class="result" href="User_complete.html">결과 먼저보기 &nbsp;☞</a>
+            </form>
+
+{% endblock %}

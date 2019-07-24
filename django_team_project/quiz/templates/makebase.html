@@ -1,11 +1,11 @@
-{%  load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 
-    <link rel="stylesheet" href="{% static 'quiz/css/User_complete-css.css' %}">
+    <link rel="stylesheet" href="quiz/css/User_complete-css.css">
+
     <style>
         * {
             margin: 0 auto;
@@ -145,6 +145,63 @@
             padding-top: 30px;
             font-weight: 700;
             font-size: 20px;
+        }
+        {#Guest_layout#}
+        .guest_header{
+            background-color: hotpink;
+            padding: 20px;
+            text-align: left;
+            font-size: 20px;
+        }
+        .guest_header .how{
+            margin-top: 20px;
+        }
+        .result{
+            display: inline-block;
+            float: right;
+            font-size: 30px;
+            font-weight: 700;
+            margin-top: 30px;
+        }
+        {#Guest_complete.html #}
+        .make {
+            width: 100%;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: none;
+            margin-bottom: 20px;
+            background: springgreen;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+        }
+        .make a{
+            text-decoration: none;
+            color: black;
+        }
+        .list_header{
+            padding: 10px;
+            text-align: left;
+            font-size: 15px;
+            font-weight: 700;
+        }
+        .scores_list{
+            background-color: white;
+            margin-top: 10px;
+        }
+        .scores_list table{
+            width: 100%;
+            margin: 0 auto;
+            font-size: 20px;
+            padding-top: 30px;
+            padding-left: 10px;
+        }
+        .scores_list table tr{
+            border-bottom: 1px solid dimgray;
+        }
+        .scores_list tr>td:nth-child(1){
+            min-width: 120px;
+            text-align: left;
         }
     </style>
 </head>

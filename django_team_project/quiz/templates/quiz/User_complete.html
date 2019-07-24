@@ -9,13 +9,13 @@
                 </h2>
 
                 <div class="url">
-                    https://zzz.studio/quiz/*****
+                    https://zzz.studio/quiz/{{ user.code }}
                 </div>
 
                 <div class="copy">
                     <p>
                     copy this url
-                    "https://zzz.studio/quiz/*****"
+                    https://zzz.studio/quiz/{{ user.code }}
                     </p>
                 </div>
             </div>
@@ -26,5 +26,11 @@
                     <br>
                     링크를 공유해보세요!
                 </h4>
+            {% for i in user %}
+            print(i)
+            {% endfor %}
+
             </div>
+
+
 {% endblock %}

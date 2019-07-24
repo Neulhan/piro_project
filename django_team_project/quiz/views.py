@@ -6,7 +6,7 @@ from django.shortcuts import redirect
 
 
 def home(request):
-    return render(request, "layout.html")
+    return render(request, "makebase.html")
 
 
 def next(request):
@@ -26,5 +26,136 @@ def create1(request):
 
 
 def create2(request):
-    return render(request, "create1.html", {'user': User.objects.all})
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    p = request.GET.get('p')
+    qs.p1 = p
+    qs.save()
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    return render(request, "create2.html", {'user': qs})
 
+
+def create3(request):
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    p = request.GET.get('p')
+    qs.p2 = p
+    qs.save()
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    return render(request, "create3.html", {'user': qs})
+
+
+def create4(request):
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    p = request.GET.get('p')
+    qs.p3 = p
+    qs.save()
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    return render(request, "create4.html", {'user': qs})
+
+
+def create5(request):
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    p = request.GET.get('p')
+    qs.p4 = p
+    qs.save()
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    return render(request, "create5.html", {'user': qs})
+
+
+def create6(request):
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    p = request.GET.get('p')
+    qs.p5 = p
+    qs.save()
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    return render(request, "create6.html", {'user': qs})
+
+
+def create7(request):
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    p = request.GET.get('p')
+    qs.p6 = p
+    qs.save()
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    return render(request, "create7.html", {'user': qs})
+
+
+def create8(request):
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    p = request.GET.get('p')
+    qs.p7 = p
+    qs.save()
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    return render(request, "create8.html", {'user': qs})
+
+
+def create9(request):
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    p = request.GET.get('p')
+    qs.p8 = p
+    qs.save()
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    return render(request, "create9.html", {'user': qs})
+
+
+def create10(request):
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    p = request.GET.get('p')
+    qs.p9 = p
+    qs.save()
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    return render(request, "create10.html", {'user': qs})
+
+
+def create11(request):
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    p = request.GET.get('p')
+    qs.p10 = p
+    qs.save()
+    qs = User.objects.all()
+    qs = qs.order_by('-id')
+    qs = qs[0]
+    return render(request, "quiz/User_complete.html", {'user': qs})
+
+
+def guest_first(request):
+
+
+    return

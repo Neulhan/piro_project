@@ -5,7 +5,7 @@ from django.db import models
 
 
 class User(models.Model):
-    name = models.IntegerField()
+    name = models.CharField(max_length=10)
     code = models.IntegerField(max_length=6)
     p1 = models.IntegerField()
     p2 = models.IntegerField()
@@ -20,7 +20,7 @@ class User(models.Model):
 
 
 class Guest(models.Model):
-    name = models.IntegerField()
+    name = models.CharField(max_length=10)
     p1 = models.IntegerField()
     p2 = models.IntegerField()
     p3 = models.IntegerField()

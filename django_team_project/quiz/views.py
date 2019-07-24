@@ -180,3 +180,4 @@ def guest_complete(request, id):
     queryset = queryset.filter(code=id)
 
     return render(request, "quiz/Guest_complete.html", {'user': queryset[0]})
+

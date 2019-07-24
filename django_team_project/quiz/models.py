@@ -5,7 +5,7 @@ from django.db import models
 
 class User(models.Model):
     name = models.CharField(max_length=10)
-    code = models.IntegerField(max_length=6)
+    code = models.IntegerField()
     p1 = models.IntegerField(default=0)
     p2 = models.IntegerField(default=0)
     p3 = models.IntegerField(default=0)
@@ -20,15 +20,15 @@ class User(models.Model):
 
 class Guest(models.Model):
     name = models.CharField(max_length=10)
-    b1 = models.BooleanField()
-    b2 = models.BooleanField()
-    b3 = models.BooleanField()
-    b4 = models.BooleanField()
-    b5 = models.BooleanField()
-    b6 = models.BooleanField()
-    b7 = models.BooleanField()
-    b8 = models.BooleanField()
-    b9 = models.BooleanField()
-    b10 = models.BooleanField()
-    score = models.IntegerField()
+    b1 = models.BooleanField(default=False)
+    b2 = models.BooleanField(default=False)
+    b3 = models.BooleanField(default=False)
+    b4 = models.BooleanField(default=False)
+    b5 = models.BooleanField(default=False)
+    b6 = models.BooleanField(default=False)
+    b7 = models.BooleanField(default=False)
+    b8 = models.BooleanField(default=False)
+    b9 = models.BooleanField(default=False)
+    b10 = models.BooleanField(default=False)
+    score = models.IntegerField(default=0)
 

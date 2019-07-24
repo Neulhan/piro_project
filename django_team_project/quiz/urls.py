@@ -1,4 +1,4 @@
-from django.urls import path
+from django.urls import path, re_path
 from . import views
 
 urlpatterns = [
@@ -15,4 +15,8 @@ urlpatterns = [
     path('create9/', views.create9),
     path('create10/', views.create10),
     path('create11/', views.create11),
+    re_path(r'^(?P<id>\d+)/$', views.guest_first),
+    re_path(r'^(?P<id>\d+)/q1/$', views.guest_q1),
+
+
 ]

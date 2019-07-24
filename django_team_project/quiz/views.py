@@ -155,7 +155,18 @@ def create11(request):
     return render(request, "quiz/User_complete.html", {'user': qs})
 
 
-def guest_first(request):
+def guest_first(request, id):
+    queryset = User.objects.all()
+    queryset = queryset.filter(code=id)
+    print(queryset)
+    return render(request, "guest_home.html", {'user': queryset[0]})
 
 
-    return
+def guest_q1(request, id):
+    guest = Guest.objects
+    guest.name = request.GET.get('name')
+    Guest.objects.create(name=guest.name)
+    queryset = User.objects.all()
+    queryset = queryset.filter(code=id)
+    return render(request, "guest_q1.html", {'user': queryset[0]})
+

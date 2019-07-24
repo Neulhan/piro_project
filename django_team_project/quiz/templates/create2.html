@@ -10,12 +10,28 @@ hello
 {{ user.name }} 의 퀴즈에 오신것을 환영!
 <br>
 2번쨰
+<!--
 <form action="http://127.0.0.1:8000/quiz/create3" method="get">
     <select name="p" id="p">
         <option value="0">왼쪽</option>
         <option value="1">오른쪽</option>
     </select>
     <button>ok</button>
+</form>
+-->
+<form method="get" action="http://127.0.0.1:8000/quiz/create3">
+    <input type="hidden" name="p" value="0">
+    <button type="submit">
+        <img src="#" alt="">
+        <p>깜찍함</p>
+    </button>
+</form>
+<form method="get" action="http://127.0.0.1:8000/quiz/create3">
+    <input type="hidden" name="p" value="1">
+    <button type="submit">
+        <img src="#" alt="">
+        <p>멋짐</p>
+    </button>
 </form>
 
 </body>

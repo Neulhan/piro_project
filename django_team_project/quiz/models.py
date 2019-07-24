@@ -1,7 +1,7 @@
 from django.db import models
 
-# Create your models here.
 
+# Create your models here.
 
 class User(models.Model):
     name = models.CharField(max_length=10)
@@ -30,3 +30,4 @@ class Guest(models.Model):
     p8 = models.CharField(max_length=10)
     p9 = models.CharField(max_length=10)
     p10 = models.CharField(max_length=10)
+

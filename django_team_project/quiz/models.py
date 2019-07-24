@@ -16,6 +16,7 @@ class User(models.Model):
     p8 = models.IntegerField(default=0)
     p9 = models.IntegerField(default=0)
     p10 = models.IntegerField(default=0)
+    p_num = models.IntegerField(default=0)
 
 
 class Guest(models.Model):

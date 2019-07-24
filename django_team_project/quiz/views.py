@@ -158,8 +158,8 @@ def create11(request):
 def guest_first(request, id):
     queryset = User.objects.all()
     queryset = queryset.filter(code=id)
-    a = Guest.objects.all()
-    return render(request, "quiz/Guest_layout.html", {'user': queryset[0], 'guest': len(a), 'id': id})
+    a = queryset[0].p_num
+    return render(request, "quiz/Guest_layout.html", {'user': queryset[0], 'guest': a, 'id': id})
 
 
 def guest_q1(request, id):
@@ -168,6 +168,10 @@ def guest_q1(request, id):
     Guest.objects.create(name=guest.name)
     queryset = User.objects.all()
     queryset = queryset.filter(code=id)
+
+    qs = User.objects.get(code=id)
+    qs.p_num += 1
+    qs.save()
     return render(request, "guest_q1.html", {'user': queryset[0], 'id': id})
 
 

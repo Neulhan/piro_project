@@ -13,7 +13,8 @@ def create_quiz1(request, pk):
 
 
 def home(request):
+    get = request.GET.get('name', 'code')
 
+    User.objects.create(name=get.name, code=get.code)
 
-
-    User.objects.create(name= , code= ,)
+    return render(request, "index.html")

@@ -1,15 +1,13 @@
 from django.contrib import admin
-from bookmark import models
-
+from .models import User, Guest
 # Register your models here.
 
-# class BookmarkAdmin(admin.ModelAdmin):
-# 	list_display = ('title', 'url')
+
+@admin.register(User)
+class UserAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'code', 'p1', 'p2']
 
 
-# # admin.site.register(models.Bookmark, BookmarkAdmin)
-# from bookmark.models import Bookmark
-# # from bookmark.admin import BookmarkAdmin
-# admin.site.register(Bookmark, BookmarkAdmin)
-
-
+@admin.register(Guest)
+class GuestAdmin(admin.ModelAdmin):
+    list_display = ['id', 'name', 'p1', 'p2']

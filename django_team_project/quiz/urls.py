@@ -5,7 +5,7 @@ from . import views
 app_name = 'quiz'
 
 urlpatterns = [
-path('<slug:quiz_value>/view_quiz_init',views.view_quiz,name='view_quiz_init'),
+path('<slug:quiz_value>/view_quiz_init',views.view_quiz_init,name='view_quiz_init'),
 path('<slug:quiz_value>/view_quiz1',views.view_quiz1,name='view_quiz1'),
 path('<slug:quiz_value>/view_quiz2',views.view_quiz2,name='view_quiz2'),
 path('<slug:quiz_value>/view_quiz3',views.view_quiz3,name='view_quiz3'),

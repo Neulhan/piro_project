@@ -30,4 +30,5 @@ class Guest(models.Model):
     b8 = models.BooleanField()
     b9 = models.BooleanField()
     b10 = models.BooleanField()
+    score = models.IntegerField()
 

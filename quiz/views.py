@@ -331,6 +331,7 @@ def guest_q11(request, id):
     queryset = User.objects.all()
     qs = Guest.objects.all()
     qs = qs.order_by('-id')
+    gues=qs
     qs = qs[0]
 
     queryset = queryset.filter(code=id)
@@ -340,13 +341,14 @@ def guest_q11(request, id):
     else:
         qs.b10 = 0
         qs.save()
-    return render(request, "quiz/Guest_complete.html", {'user': queryset[0], 'id': id})
+    return render(request, "quiz/Guest_complete.html", {'user': queryset[0], 'id': id, 'score':gues})
 
 
 def guest_complete(request, id):
     queryset = User.objects.all()
     qs = Guest.objects.all()
     qs = qs.order_by('-id')
+    gues = qs
     qs = qs[0]
 
     queryset = queryset.filter(code=id)
@@ -359,5 +361,5 @@ def guest_complete(request, id):
 
     qs.score = qs.b1+qs.b2+qs.b3+qs.b4+qs.b5+qs.b6+qs.b7+qs.b8+qs.b9+qs.b10
     qs.save()
-    return render(request, "quiz/Guest_complete.html", {'user': queryset[0], 'score': qs})
+    return render(request, "quiz/Guest_complete.html", {'user': queryset[0], 'score': gues})
 
